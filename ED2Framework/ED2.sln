@@ -1,0 +1,56 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ED2UI", "ED2UI\ED2UI.csproj", "{50471E4A-E147-4D17-A19F-696BCDDACF03}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ED2Business", "ED2Business\ED2Business.csproj", "{D122AEC4-E5CE-4749-B73F-BE02DC1BF2B7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ED2Generator", "ED2Generator\ED2Generator.csproj", "{D827D4B3-BA32-4C74-9261-2582568D7BA3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ED2DataStructures", "ED2DataStructures\ED2DataStructures.csproj", "{201AB9C5-FBF2-4315-9F3D-3B83146A089D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ED2Util", "ED2Util\ED2Util.csproj", "{8A8C150B-9546-41A4-A127-5AC19063AF04}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{50471E4A-E147-4D17-A19F-696BCDDACF03}.Debug.ActiveCfg = Debug|.NET
+		{50471E4A-E147-4D17-A19F-696BCDDACF03}.Debug.Build.0 = Debug|.NET
+		{50471E4A-E147-4D17-A19F-696BCDDACF03}.Release.ActiveCfg = Release|.NET
+		{50471E4A-E147-4D17-A19F-696BCDDACF03}.Release.Build.0 = Release|.NET
+		{D122AEC4-E5CE-4749-B73F-BE02DC1BF2B7}.Debug.ActiveCfg = Debug|.NET
+		{D122AEC4-E5CE-4749-B73F-BE02DC1BF2B7}.Debug.Build.0 = Debug|.NET
+		{D122AEC4-E5CE-4749-B73F-BE02DC1BF2B7}.Release.ActiveCfg = Release|.NET
+		{D122AEC4-E5CE-4749-B73F-BE02DC1BF2B7}.Release.Build.0 = Release|.NET
+		{D827D4B3-BA32-4C74-9261-2582568D7BA3}.Debug.ActiveCfg = Debug|.NET
+		{D827D4B3-BA32-4C74-9261-2582568D7BA3}.Debug.Build.0 = Debug|.NET
+		{D827D4B3-BA32-4C74-9261-2582568D7BA3}.Release.ActiveCfg = Release|.NET
+		{D827D4B3-BA32-4C74-9261-2582568D7BA3}.Release.Build.0 = Release|.NET
+		{201AB9C5-FBF2-4315-9F3D-3B83146A089D}.Debug.ActiveCfg = Debug|.NET
+		{201AB9C5-FBF2-4315-9F3D-3B83146A089D}.Debug.Build.0 = Debug|.NET
+		{201AB9C5-FBF2-4315-9F3D-3B83146A089D}.Release.ActiveCfg = Release|.NET
+		{201AB9C5-FBF2-4315-9F3D-3B83146A089D}.Release.Build.0 = Release|.NET
+		{8A8C150B-9546-41A4-A127-5AC19063AF04}.Debug.ActiveCfg = Debug|.NET
+		{8A8C150B-9546-41A4-A127-5AC19063AF04}.Debug.Build.0 = Debug|.NET
+		{8A8C150B-9546-41A4-A127-5AC19063AF04}.Release.ActiveCfg = Release|.NET
+		{8A8C150B-9546-41A4-A127-5AC19063AF04}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		..\ED2.vsd = ..\ED2.vsd
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

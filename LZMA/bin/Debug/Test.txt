@@ -1,0 +1,109 @@
+Fabiana Freire de Araújo
+A streaming operation is typically used to create a stream. Once the stream is ready, you can write data to it. The writing operation is performed through various classes. One of these classes is BinaryWriter.
+
+The BinaryWriter class can be used to write values of primitive data types (char, int, float, double, etc). To use a BinaryWriter value, you can first declare its variable. To do this, you would use one of the class' three constructors. The first constructor is the default, meaning it doesn't take an argument. The second constructor has the following syntax:
+
+public BinaryWriter(Stream output);
+
+This constructor takes as argument a Stream value, which could be a FileStream variable. Here is an example:
+
+private void btnProcess_Click(object sender, System.EventArgs e)
+{
+	string fileName = "Persons.spr";
+
+	FileStream fstPersons = new FileStream(fileName, FileMode.Create);
+	BinaryWriter wrtPersons = new BinaryWriter(fstPersons);
+}
+
+Most classes that are used to add values to a stream are equipped with a method called Write. This is also the case for the BinaryWriter class. This method takes as argument the value that must be written to the stream. The method is overloaded so that there is a version for each primitive data type. Here is an example that adds strings to a newly created file:
+
+private void btnProcess_Click(object sender, System.EventArgs e)
+{
+	string fileName = "Persons.spr";
+
+	FileStream fstPersons = new FileStream(fileName, FileMode.Create);
+	BinaryWriter wrtPersons = new BinaryWriter(fstPersons);
+			
+	wrtPersons.Write("James Bloch");
+	wrtPersons.Write("Catherina Wallace");
+	wrtPersons.Write("Bruce Lamont");
+	wrtPersons.Write("Douglas Truth");
+}
+
+Stream Closing
+
+When you use a stream, it requests resources from the operating system and uses them while the stream is available. When you are not using the stream anymore, you should free the resources and make them available again to the operating system so that other services can use them. This is done by closing the stream.
+
+To close a stream, you can can call the Close() method of the class(es) you were using. Here are examples:
+
+private void btnProcess_Click(object sender, System.EventArgs e)
+{
+	string fileName = "Persons.spr";
+
+	FileStream fstPersons = new FileStream(fileName, FileMode.Create);
+	BinaryWriter wrtPersons = new BinaryWriter(fstPersons);
+			
+	wrtPersons.Write("James Bloch");
+	wrtPersons.Write("Catherina Wallace");
+	wrtPersons.Write("Bruce Lamont");
+	wrtPersons.Write("Douglas Truth");
+
+	wrtPersons.Close();
+	fstPersons.Close();
+}
+
+Stream Reading
+
+As opposed to writing to a stream, you may want to read existing data from it. Before doing this, you can first specify your intent to the streaming class using the FileMode enumerator. This can be done using the FileStream class as follows:
+
+private void btnProcess_Click(object sender, System.EventArgs e)
+{
+	string fileName = "Persons.spr";
+/*
+	FileStream fstPersons = new FileStream(fileName, FileMode.Create);
+	BinaryWriter wrtPersons = new BinaryWriter(fstPersons);
+			
+	wrtPersons.Write("James Bloch");
+	wrtPersons.Write("Catherina Wallace");
+	wrtPersons.Write("Bruce Lamont");
+	wrtPersons.Write("Douglas Truth");
+
+	wrtPersons.Close();
+	fstPersons.Close();
+*/
+	FileStream fstPersons = new FileStream(fileName, FileMode.Open);
+}
+
+Once the stream is ready, you can get prepared to read data from it. To support this, you can use the BinaryReader class. This class provides two constructors. One of the constructors (the first) has the following syntax:
+
+public BinaryReader(Stream input);
+
+This constructor takes as argument a Stream value, which could be a FileStream object. After declaring a FileStream variable using this constructor, you can read data from it. To support this, the class provides an appropriate method for each primitive data type.
+
+After using the stream, you should close it to reclaim the resources it was using. This is done by calling the Close() method.
+
+Here is an example of using the mentioned methods:
+
+private void btnProcess_Click(object sender, System.EventArgs e)
+{
+	string fileName = "Persons.spr";
+/*
+	FileStream fstPersons = new FileStream(fileName, FileMode.Create);
+	BinaryWriter wrtPersons = new BinaryWriter(fstPersons);
+			
+	wrtPersons.Write("James Bloch");
+	wrtPersons.Write("Catherina Wallace");
+	wrtPersons.Write("Bruce Lamont");
+	wrtPersons.Write("Douglas Truth");
+
+	wrtPersons.Close();
+	fstPersons.Close();
+*/
+	FileStream fstPersons = new FileStream(fileName, FileMode.Open);
+	BinaryReader rdrPersons = new BinaryReader(fstPersons);
+
+	rdrPersons.Close();
+	fstPersons.Close();
+}
+
+ 
